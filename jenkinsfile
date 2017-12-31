@@ -10,10 +10,8 @@ pipeline {
 
  
             steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                '''
+                def mvnHome = tool 'maven-3'
+    sh "${mvnHome}/bin/mvn clean install -DskipTests"
             }
         
 
