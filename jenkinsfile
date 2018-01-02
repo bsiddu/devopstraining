@@ -1,7 +1,9 @@
 pipeline {
 
     agent any
-
+tools { 
+        maven 'Maven 3.5.2' 
+        jdk 'jdk8' 
 
 
     stages {
@@ -11,16 +13,18 @@ pipeline {
  
             steps {
                 def mvnHome = tool 'maven-3'
-    sh "${mvnHome}/bin/mvn clean install -DskipTests"
-            }
+    sh "${mvnHome}/bin/mvn clean package "
+                  }
         
 
 
 
             
 
-        }
-
-   }
+                                }
+                  
+            }
    
-}   
+     
+     }   
+           }
