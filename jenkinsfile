@@ -3,10 +3,10 @@ agent any
  
 tools{
 maven 'maven3'
-jdk 'java 8'
+jdk 'jdk8'
 }
  
-
+stages {
 
 stage ('Build project') {
 steps {
@@ -15,5 +15,5 @@ sh 'mvn clean verify'
 
 }
 }
-
+}
 }
