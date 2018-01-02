@@ -12,7 +12,7 @@ tools {
  
             steps {
                 def mvnHome = tool 'maven-3'
-    sh "${mvnHome}/bin/mvn clean package "
+    sh "mvn clean package "
                   }
         
 
