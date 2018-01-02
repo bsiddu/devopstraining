@@ -10,11 +10,10 @@ jdk 'java 8'
 
 stage ('Build project') {
 steps {
-{
 sh 'mvn clean verify'
  
 
 }
 }
-}
+
 }
