@@ -4,7 +4,7 @@ agent any&lt;/code&gt;
 tools{
 maven 'maven 3'
 jdk 'java 8'
-}
+     }
  
 stages {
 stage ("initialize") {
@@ -13,8 +13,8 @@ sh '''
 echo "PATH = ${PATH}"
 echo "M2_HOME = ${M2_HOME}"
 '''
-}
-}
+                      }
+       }
 
 stage ('Build project') {
 steps {
@@ -22,7 +22,7 @@ steps {
 sh 'mvn clean verify
  
 }
-}
-}
-}
-}
+      }
+                         }
+      }
+          }
