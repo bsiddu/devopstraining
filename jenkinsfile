@@ -6,12 +6,7 @@ agent any
 stages {
   stage ('Build') {
  
-    git url: 'https://github.com/cyrille-leclerc/multi-module-maven-project'
- 
-    withMaven(
-        maven: 'M3',
-        mavenSettingsConfig: 'my-maven-settings',
-        mavenLocalRepo: '.repository') {
+ steps     {
  
       sh "mvn clean install"
  
