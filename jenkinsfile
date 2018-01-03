@@ -1,5 +1,6 @@
 stage 'build'
 node{
-    checkout scm
-    sh 'mvn clean install'
+    withEnv(["PATH+MAVEN=${tool 'm3'}/bin"]) {
+    sh "mvn clean verify"
+}
 }
