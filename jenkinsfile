@@ -14,5 +14,4 @@ node ('master'){
     sh "mvn clean verify"
 }
 }
-}
 
