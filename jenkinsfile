@@ -1,6 +1,6 @@
 stage 'build'
 node{
-    withEnv(["PATH+MAVEN=${tool 'm3'}/bin"]) {
+    withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"]) {
     sh "mvn clean verify"
 }
 }
