@@ -16,5 +16,18 @@ stages {
  
     } 
   }
+  
+  stage ('Speak') {
+   steps {
+           if {
+                maven = 'maven3' & jdk = 'jdk8'
+                echo "already installed"
+            }
+            else {
+            sh "mvn clean install"
+           
+                
+            }
+        }
 }
 }
