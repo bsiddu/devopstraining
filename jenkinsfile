@@ -9,6 +9,7 @@ node ('master'){
 withEnv([tool 'maven3'/bin]){
     withEnv([tool 'jdk8'/bin]){
      
+    withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"],["PATH+JDK=${tool 'jdk8'}/bin"]){
     
       
     sh "mvn clean verify"
