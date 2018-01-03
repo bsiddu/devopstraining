@@ -1,10 +1,13 @@
-
+stage 'checkout'
+node{
+    checkout scm
+}
 
 stage 'build'
 node{
     withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"]){
     withEnv(["PATH+JDK=${tool 'jdk8'}/bin"]){
-        checkout scm
+      
     sh "mvn clean verify"
 }
 }
