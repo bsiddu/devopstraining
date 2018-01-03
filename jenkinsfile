@@ -6,8 +6,8 @@ node ('master'){
 stage 'build'
 node ('master'){
 
-withEnv([${tool 'maven3'}/bin]){
-    withEnv([${tool 'jdk8'}/bin]){
+withEnv([tool 'maven3'/bin]){
+    withEnv([tool 'jdk8'/bin]){
      
     
       
