@@ -19,7 +19,7 @@ stages {
   
   stage ('Speak') {
    steps {
-           if (tool.maven == 'maven3' & tool.jdk == 'jdk8'){
+           if (tool.maven == 'maven3' && tool.jdk == 'jdk8'){
                 
                 echo "already installed"
             }
