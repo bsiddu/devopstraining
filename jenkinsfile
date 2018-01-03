@@ -1,40 +1,5 @@
-
-pipeline
-{
-tools{
-maven 'maven3'
-jdk 'jdk8'
-}
-agent any
-
-stages {
-  stage ('Build') {
- 
- steps     {
- 
-      sh "mvn clean install"
- 
-    } 
-  }
-  
-  stage ('Speak') {
-   steps {
-   
-   script {
-      
-       def mvnHome = tool name: 'maven3'
-       def jdkHome = tool name: 'jdk8'
-
-           
-                
-                echo "maven home is  ${mvnHome}"
-                echo "java home is ${jdkHome}"
-            
-                   
-                
-            
-            }
-        }
-}
-}
+stage 'build'
+node{
+    checkout scm
+    sh 'mvn clean install'
 }
