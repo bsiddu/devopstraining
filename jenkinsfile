@@ -24,7 +24,7 @@ stages {
       
      
 
-           if (tool.type == 'maven' && tool.type == 'jdk'){
+           if (tool 'maven3' && tool 'jdk8'){
                 
                 echo "already installed"
             }
