@@ -24,7 +24,7 @@ stages {
       
      
 
-           if (${'maven'} == 'maven3' && ${'jdk'} == 'jdk8'){
+           if (maven == 'maven3' && jdk == 'jdk8'){
                 
                 echo "already installed"
             }
