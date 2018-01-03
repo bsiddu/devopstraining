@@ -25,7 +25,7 @@ stages {
        def mvnHome = tool name: 'maven3'
        def jdkHome = tool name: 'jdk8'
 
-           if ((mvnHome == maven) && (jdkHome== jdk8)){
+           if ((mvnHome == maven3) && (jdkHome== jdk8)){
                 
                 echo "already installed"
             }
