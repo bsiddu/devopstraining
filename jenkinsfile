@@ -27,7 +27,8 @@ stages {
 
            
                 
-                echo "${mvnHome}"
+                echo "maven home is  ${mvnHome}"
+                echo "java home is ${jdkHome}"
             
                    
                 
