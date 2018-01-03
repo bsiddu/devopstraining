@@ -19,6 +19,8 @@ stages {
   
   stage ('Speak') {
    steps {
+   
+   script {
       
      
 
@@ -30,6 +32,7 @@ stages {
             sh "mvn clean install"
            
                 
+            }
             }
         }
 }
