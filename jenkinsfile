@@ -7,12 +7,10 @@ stage 'build'
 node ('master'){
 
      
-    withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"]){
-     withEnv(["PATH+JDK=${tool 'jdk8'}/bin"]){
+    
     
       
     sh "mvn clean verify"
-}
-}
+
 }
 
