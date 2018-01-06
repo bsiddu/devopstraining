@@ -27,7 +27,7 @@ else
 
         echo "installing maven and Java"
         tool.maven 'maven3' 
-        tooljdk 'jdk8' 
+        tool.jdk 'jdk8' 
         
                 sh "mvn clean verify"
 
