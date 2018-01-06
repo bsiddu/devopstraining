@@ -6,8 +6,8 @@ node ('master'){
 
 stage 'build'
 
-def folder = new File( '/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3' )
-def folder1 = new File( '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8' )
+def folder = '/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3' 
+def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8' 
 
 
 
