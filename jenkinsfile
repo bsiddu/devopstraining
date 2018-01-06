@@ -24,10 +24,11 @@ else
 {
 
 
-
+tools {
         echo "installing maven and Java"
-        tool.maven 'maven3' 
-        tool.jdk 'jdk8' 
+        maven 'maven3' 
+        jdk 'jdk8' 
+        }
         
                 sh "mvn clean verify"
 
