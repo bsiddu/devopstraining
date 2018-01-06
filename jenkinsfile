@@ -5,13 +5,41 @@ node ('master'){
 
 stage 'build'
 
+def folder = new File( '/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3' )
+def folder1 = new File( '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8' )
 
-     withEnv(["PATH+MAVEN=${tool 'maven3'}/bin","PATH+JDK=${tool 'jdk8'}/bin"]){
+
+
+if( folder.exists() && folder1.exits() ) {
+  
+  echo "java and maven are already installed"
+       withEnv(["PATH+MAVEN=${tool 'maven3'}/bin","PATH+JDK=${tool 'jdk8'}/bin"]){
+       
+        sh "mvn clean verify"
+
+}
+
+}
+
+else
+{
+
+tools { 
+
+        echo "installing maven and Java"
+        maven 'Maven 3.3.9' 
+        jdk 'jdk8' 
+        
+                sh "mvn clean verify"
+
+    }
+
+
      
     
     
       
-    sh "mvn clean verify"
+   
 
 }
 }
