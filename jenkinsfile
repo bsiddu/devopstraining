@@ -25,10 +25,6 @@ else
 {
 
 
-tools {
-        maven 'maven3' 
-        jdk 'jdk8' 
-        }
                 echo "installing maven and Java"
 
         
