@@ -28,10 +28,10 @@ tools {
         echo "installing maven and Java"
         maven 'maven3' 
         jdk 'jdk8' 
-        }
+        
         
                 sh "mvn clean verify"
-
+}
     }
 
 
