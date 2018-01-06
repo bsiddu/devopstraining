@@ -1,10 +1,11 @@
 stage 'checkout'
+
 node ('master'){
     checkout scm
 
 
 stage 'build'
-
+{
 def folder = new File( '/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3' )
 def folder1 = new File( '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8' )
 
@@ -27,7 +28,7 @@ else
 tools { 
 
         echo "installing maven and Java"
-        maven 'Maven 3.3.9' 
+        maven 'maven3' 
         jdk 'jdk8' 
         
                 sh "mvn clean verify"
@@ -35,7 +36,7 @@ tools {
     }
 
 
-     
+  }   
     
     
       
