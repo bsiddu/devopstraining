@@ -25,13 +25,15 @@ else
 
 
 tools {
-        echo "installing maven and Java"
         maven 'maven3' 
         jdk 'jdk8' 
+        }
+                echo "installing maven and Java"
+
         
         
                 sh "mvn clean verify"
-}
+
     }
 
 
