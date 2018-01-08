@@ -1,3 +1,5 @@
+import java.nio.file.Files
+
 stage 'checkout'
 
 node ('master'){
@@ -20,17 +22,23 @@ def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8'
 
 }
 
+
+
 else
 {
 
 
                 echo "installing maven and Java"
 
-        withEnv(["folder/bin","folder1/bin"])
-        {
+tools {
+
+
+}
+
+       
         
                 sh "mvn clean verify"
-}
+
     }
 
 
