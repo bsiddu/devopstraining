@@ -12,6 +12,7 @@ stage 'build'
 
 def folder = "/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3/bin"
 def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8/bin' 
+boolean exists=file.exits();
 
         if(Files.exits(folder)==true) {
   
