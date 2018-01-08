@@ -1,38 +1,54 @@
-pipeline
+import java.nio.file.Files
+import java.lang.*
+import hudson.FilePath.FileCallable;
+
+stage 'checkout'
+
+node ('master'){
+    checkout scm
+
+
+stage 'build'
+
+def folder = "/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3/bin"
+def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8/bin' 
+
+
+        if(folder== (tool name: 'maven3')) {
+  
+  echo "java and maven are already installed"
+       withEnv(["PATH+MAVEN=${tool 'maven3'}/bin","PATH+JDK=${tool 'jdk8'}/bin"]){
+
+        sh "mvn clean verify"
+}
+
+
+}
+
+
+
+else
 {
 
-agent any
-tools{
-maven 'maven3'
-jdk 'jdk8'
-}
-stages {
-  stage ('Build') {
- 
- steps     {
- 
-      sh "mvn clean install"
- 
-    } 
-  }
-  
-  stage ('Speak') {
-   steps {
-   
-   script {
-      
-       def mvnHome = tool name: 'maven3'
-       def jdkHome = tool name: 'jdk8'
 
-           
-                
-                echo "${mvnHome}"
-            
-                   
-                
-            
-            }
-        }
+                echo "installing maven and Java"
+
+tools {
+
+
+
+
 }
-}
-}
+
+       
+        
+                sh "mvn clean verify"
+
+    }
+
+
+  
+
+
+    
+      }
