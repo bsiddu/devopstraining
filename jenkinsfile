@@ -10,8 +10,8 @@ node ('master'){
 
 stage 'build'
 
-def folder = "/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3/bin"
-def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8/bin' 
+def folder = "/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3"
+def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8' 
 
 
         if(folder== (env.MAVEN_HOME)) {
