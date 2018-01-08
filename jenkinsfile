@@ -26,7 +26,7 @@ def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8'
 }
 
 
-}
+
 
 
 
@@ -40,10 +40,10 @@ echo "java and maven are already installed"
                 
 
     }
-
+}
 
   
 
 
     
-      }
+      
