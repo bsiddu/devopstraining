@@ -9,7 +9,7 @@ stage 'build'
 def folder = '/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3' 
 def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8' 
 
-        if(1==1 ) {
+        if(2==1 ) {
   
   echo "java and maven are already installed"
        withEnv(["PATH+MAVEN=${tool 'maven3'}/bin","PATH+JDK=${tool 'jdk8'}/bin"]){
