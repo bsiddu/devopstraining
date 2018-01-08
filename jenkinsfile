@@ -33,12 +33,7 @@ else
 
                 echo "installing maven and Java"
 
-tools {
 
-
-
-
-}
 
        
         
