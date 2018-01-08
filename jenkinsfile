@@ -16,7 +16,7 @@ def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8'
 
         sh "mvn clean verify"
 
-}
+
 
 }
 
@@ -33,7 +33,7 @@ else
     }
 
 
-  
+  }
 
 
     
