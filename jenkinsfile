@@ -17,12 +17,12 @@ def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8'
         if(folder== (env.MAVEN_HOME)) {
   
   echo "installing maven and Java"
-
-
-
-       
-        
-                sh "mvn clean verify"
+  
+  tools{
+maven 'maven3'
+jdk 'jdk8'
+}
+ sh "mvn clean verify"
 }
 
 
