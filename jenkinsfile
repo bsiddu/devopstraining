@@ -14,7 +14,7 @@ def folder = "/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation
 def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8/bin' 
 
 
-        if(folder== (tool name: 'maven3')) {
+        if(folder== (env.MAVEN_HOME)) {
   
   echo "java and maven are already installed"
        withEnv(["PATH+MAVEN=${tool 'maven3'}/bin","PATH+JDK=${tool 'jdk8'}/bin"]){
