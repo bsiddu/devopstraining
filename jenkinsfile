@@ -1,4 +1,5 @@
 import java.nio.file.Files
+import java.lang.*
 import hudson.FilePath.FileCallable;
 
 stage 'checkout'
