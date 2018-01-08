@@ -7,28 +7,22 @@ stage 'checkout'
 node ('master'){
     checkout scm
 
-
 stage 'build'
 
 def folder = "/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3"
 def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8' 
 
-
-        if(folder== (env.MAVEN_HOME)) {
+if(folder== (env.MAVEN_HOME)) {
   
   echo "installing maven and Java"
   
-  tools{
+tools{
 maven 'maven3'
 jdk 'jdk8'
 }
  sh "mvn clean verify"
-}
 
-
-
-
-
+                              }
 
 else
 {
@@ -38,12 +32,7 @@ echo "java and maven are already installed"
         sh "mvn clean verify"
 
                 
-
-    }
 }
 }
-  
-
-
-    
+}
       
