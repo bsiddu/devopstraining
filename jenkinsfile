@@ -26,7 +26,7 @@ else
 
                 echo "installing maven and Java"
 
-        withEnv(["folder","folder1"])
+        withEnv(["folder/bin","folder1/bin"])
         {
         
                 sh "mvn clean verify"
