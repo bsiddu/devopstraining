@@ -9,7 +9,7 @@ node ('master'){
 
 stage 'build'
 
-Path folder = "/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3/bin"
+def folder = "/home/ec2-user/.jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3/bin"
 def folder1 = '/home/ec2-user/.jenkins/tools/hudson.model.JDK/jdk8/bin' 
 
         if(Files.exits(folder)) {
